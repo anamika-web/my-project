@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/myProfile.css">
+    <script src="https://kit.fontawesome.com/94668545d7.js" crossorigin="anonymous"></script>
+    <title>My Profile</title>
+</head>
+<body class="body">
+  <div class="big-box">
+    <div class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <div class="content">
+        <div class="logo"><a href="C:\Users\asus\Desktop\html code\garbage project\index1.html"><img src="logo.jpg" width="90" height="87"alt=""></a></div>
+          <ul class="links">
+           
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#" class="desktop-link">Book Now</a>
+              
+            </li>
+            <li><a href="#">Subscription</a></li>
+            <li>
+              <a href="#" class="desktop-link">Profile</a>
+              <input type="checkbox" id="show-features">
+              <label for="show-features">Features</label>
+              
+              <ul>
+                
+                <li><a href="C:\Users\asus\Desktop\pandit\dust-main\myProfile.html">My Profile</a></li>
+                <li><a href="C:\Users\asus\Desktop\mathur\Akshat--main\login1.html">Login/SignUp</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+               
+              </ul>
+            </li>
+           
+           
+            
+          </ul>
+        </div>
+        <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+        <form action="#" class="search-box">
+          <input type="text" placeholder="Type Something to Search..." required>
+          <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </form>
+      </nav>
+    </div>
+    <div class="info">
+      <div class="name">
+        <h2>vivek sharma</h2>
+        <div class="inline">
+          <h5>9548698754 &nbsp. </h5>
+          <h5>&nbsp &nbspvnsnvnso@gmail.com</h5>
+        </div>
+      </div>
+      <div class="butt" id="but" onclick="openSlideMenu()">
+        <h4 class="edit">edit prof</h4>
+      </div> 
+    </div>
+  <section class="side-box">
+    <div class="mid-box">
+        <div class="small-box">
+          <ul class="list">
+            <li class="l1"><a class=" page1" href="myProfile.html"><i class="fas fa-map-marker-alt"></i><h5>address</h5></a></li>
+            <li class="l2"><a class=" page2" href="history.html"><i class="fas fa-history"></i><h5>history</h5></a></li>
+            <li class="l3"><a class=" page3" href="bill.html"><i class="fas fa-file-invoice"></i><h5>your bill</h5></a></li>
+            <li class="l4"><a class=" page4"  href="payment.html"><i class="far fa-credit-card"></i><h5>payment</h5></a></li>
+            <li class="l5"><a class=" page5" href="feedback.html"><img src="img/feedback.png" alt=""><h5>feedback</h5></a></li>
+          </ul>
+        </div>
+        <div class="addr">
+          <h4>my address</h4>
+        <address>
+          257/14,<br> mayur vihar new satha bulandshahr <br>uttar pradesh <br> Pin - 203001
+        </address>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14037.879573568636!2d77.83675726022135!3d28.40507496184429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMayur%20Vihar%20New%20Satha%20Bulandshahr%20Uttar%20Pradesh%20Pin%20-%20203001!5e0!3m2!1sen!2sin!4v1625264349086!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <button>Change Address</button>
+        </div>
+      </div>
+    </section>
+    </div>
+  <div class="form" id="ff">
+    <div class="form-up">
+    <a href="#" class="close" onclick="closeSlideBar()">
+        <i class="fas fa-times fa-2x"></i>
+    </a>
+    <h2>edit profile</h2>
+    </div> 
+    <div class="lab">
+    <label>
+      <span>email  </span>
+     <div class="f1"><input type="email" placeholder="write your new email..." name ="email"><button class="s1" type="button">change</button></div>
+  </label>
+  <label>
+      <span>Password   </span>
+      <div class="f2"><input type="password" placeholder="write your new password..." name="password"><button class="s2" type="button">change</button></div>
+  </label>
+  <label>
+    <span>phone number</span>
+    <div class="f3"><input type="tel" placeholder="write your new number..." name="phone"><button class="s3" type="button">change</button></div>
+  </label>
+  </div>
+  <div class="overlay"></div>
+  </div>
+  <script>
+   /* const menuToggle=
+    document.querySelector('.butt');
+    const showcase=
+    document.querySelector('.form');
+
+    menuToggle.addEventListener('click',() =>{
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+    })*/
+    var style = document.createElement('style');
+      document.head.appendChild(style);
+      
+     function openSlideMenu(){
+      document.getElementById('ff').style.width="350px";
+      document.getElementById('ff').style.left="72.3%";
+      document.getElementById('ff').style.visibility="visible";
+      style.sheet.insertRule('#but {backdrop-filter:blur(3px)},{position:absolute}, {top:0}, {left:0}, {width:100%}, {height:100%}, {background:var(--overlay-color)}, { mix-blend-mode: overlay}');
+    }
+    function closeSlideBar(){
+      document.getElementById('ff').style.width="0px";
+      document.getElementById('ff').style.left="100vw";
+      document.getElementById('ff').style.visibility="hidden";
+    }
+</script>
+</body>
+</html>
